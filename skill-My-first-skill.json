@@ -1,0 +1,367 @@
+{
+  "intents": [
+    {
+      "intent": "اسئلة",
+      "examples": [
+        {
+          "text": "اود سؤالك عن شيء؟"
+        },
+        {
+          "text": "لدي سؤال؟"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "الروبوت",
+      "examples": [
+        {
+          "text": "الروبوت مشاكس"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "اهلا"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "هلا"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "حال",
+      "examples": [
+        {
+          "text": "الحمدلله"
+        },
+        {
+          "text": "بخير"
+        },
+        {
+          "text": "بخير الحمدلله"
+        },
+        {
+          "text": "تمام"
+        },
+        {
+          "text": "طيب"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "حزين",
+      "examples": [
+        {
+          "text": "انا حزين"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "سعيد",
+      "examples": [
+        {
+          "text": "انا سعيد"
+        },
+        {
+          "text": "نعم بخير"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "شكر",
+      "examples": [
+        {
+          "text": "شكرا"
+        },
+        {
+          "text": "شكرا لك"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "موضوع",
+      "examples": [
+        {
+          "text": "موضوع يخصني"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "وداع",
+      "examples": [
+        {
+          "text": "الى اللقاء"
+        },
+        {
+          "text": "مع السلامه"
+        },
+        {
+          "text": "وداعا"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "وداع",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "سررت بمقابلك!"
+              },
+              {
+                "text": "سعدت بالتعرف عليك!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#وداع",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_3_1625143394653",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "موضوع",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "هل انت بخير؟"
+              },
+              {
+                "text": "هل انت سعيد اليوم؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#موضوع",
+      "dialog_node": "node_10_1625143142600",
+      "previous_sibling": "node_1_1625142653645"
+    },
+    {
+      "type": "standard",
+      "title": "حال",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "شكراً لزيارتك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#حال",
+      "dialog_node": "node_1_1625141565366",
+      "previous_sibling": "node_2_1624967507533"
+    },
+    {
+      "type": "standard",
+      "title": "الروبوت",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "روبوت مشاكس ,هو روبوت منافس يحاول التغلب على خصمه عن طريق تحريك اداه بذراعه لتخريب بالونة الخصم المقابل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#الروبوت",
+      "dialog_node": "node_1_1625142653645",
+      "previous_sibling": "node_6_1625141988996"
+    },
+    {
+      "type": "standard",
+      "title": "ترحيب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "   كيف حالك اليوم؟"
+              },
+              {
+                "text": "اهلا بك ,كيف حالك؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "node_2_1624967507533",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "حزين",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "يؤسفني سماع ذلك. أحياناً يكون الهدوء لفترة وجيزة مفيداً"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#حزين",
+      "dialog_node": "node_3_1625143394653",
+      "previous_sibling": "node_8_1625143310461"
+    },
+    {
+      "type": "standard",
+      "title": "شكر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "على الرحب والسعه!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#شكر",
+      "dialog_node": "node_4_1625141761377",
+      "previous_sibling": "node_1_1625141565366"
+    },
+    {
+      "type": "standard",
+      "title": "اسئلة",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "من اللطيف سماع ذلك. يمكنني مساعدتك في الإجابة على استفساراتك حول الروبوت مشاكس او هل تود التحدث معي بخصوص موضوع يخصك ؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#اسئلة",
+      "dialog_node": "node_6_1625141988996",
+      "previous_sibling": "node_4_1625141761377"
+    },
+    {
+      "type": "standard",
+      "title": "سعيد",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "رائع!"
+              },
+              {
+                "text": "!مذهل"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#سعيد",
+      "dialog_node": "node_8_1625143310461",
+      "previous_sibling": "node_10_1625143142600"
+    },
+    {
+      "type": "standard",
+      "title": "welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "مرحبا, انا  الروبوت الذكي مساعد أ.ليلى مرحباً بك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
