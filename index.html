@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="engine">
+        <div class="count1">
+
+<form action="1.php" method="post">
+
+
+  <h1 class="headers">CONTROL</h1>
+<br>
+
+
+<div class="La">
+  <h1>Slider 1: </h1>
+    <input type="range" min="0" max="180" value="0" id="Slider" name="sl1" >
+    <div id="val"> </div>
+</div>
+
+
+<div class="La">
+      <h1>Slider 2: </h1>
+        <input type="range" min="0" max="180" value="0" id="Slider2" name="sl2"  >
+        <div id="val2"></div>
+</div>
+
+
+<div class="La">
+      <h1>Slider 3 :</h1>
+        <input type="range" min="0"max="180" value="0" id="Slider3" name="sl3" >
+            <div id="val3"></div>
+   </div>
+      <div class="La">
+            <h1>Slider 4 :</h1>
+            <input type="range" min="0"max="180" value="0" id="Slider4"  name="sl4" >
+            <div id="val4"></div>
+
+      </div>
+      <div class="La">
+            <h1>Slider 5 :</h1>
+            <input type="range" min="0"max="180" value="0" id="Slider5"  name="sl5" >
+            <div id="val5"></div>
+  </div>
+
+      <div class="La">
+            <h1>Slider 6 :</h1>
+            <input type="range" min="0"max="180" value="0" id="Slider6"  name="sl6" >
+            <div id="val6"></div>
+     </div>
+     <input type="submit"name = "save" value="SAVE" class="bu1_save">
+</form>
+<form action="2.php" method="post">
+ <div class="La7">
+
+   <input type="button"value="RUN" name="on" class="bu2_on" >
+</form>
+
+
+    </div>
+
+
+    <div class="count2">
+        <form action="3.php" method="post">
+        <div class="up">
+            <button  name="forword"> forward</button>
+        </div>
+    </form>
+    <div class="le">
+        <form class="l" action="4.php" method="post">
+                
+            <button   name="left">left</button>
+              
+            </form>
+            
+       
+    
+             <form class="s" action="5.php" method="post">
+                
+            <button  name="Stop">stop</button>
+               
+             </form>
+             <form class="r" action="6.php" method="post">
+           
+                <button  name="Right">right</button>
+               
+            </form>
+             
+    
+        
+    </div>
+        <form action="7.php" method="post">
+    
+        <div class="do">
+            <button class="back" name="backward">backward</button>
+        </div>
+
+
+
+
+    </form>
+
+</div>
+</div>
+
+  </body>
+
+  <script src="angle.js"></script>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "ba39bf85-cfab-4644-9487-2ab65fd5bbbe", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "29499d49-ca0b-4a7b-a1d5-e45ab0b68bd4", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</html>
