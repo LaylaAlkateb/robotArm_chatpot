@@ -1,6 +1,12 @@
+use IBM Watson to create assistant name (مشاكس)
+and create skill 
+
+
+
+
 index.html 
 
-اضافة chat pot code
+add chat pot code
 
 
 
